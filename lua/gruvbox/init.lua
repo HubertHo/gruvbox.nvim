@@ -9,4 +9,10 @@ local spec = lush.merge(specs)
 -- checking if user has lightline and adding support
 require("gruvbox.plugins.lightline").start(spec)
 
+spec = lush.extends(spec).with(function()
+    return {
+        TSKeywordOperator {base.GruvboxAquaBold}
+    }
+end)
+
 return spec
