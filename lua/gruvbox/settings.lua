@@ -12,7 +12,7 @@ local settings = {
   improved_strings = false,
   improved_warnings = false,
   invert_signs = false,
-  invert_selection = true,
+  invert_selection = false,
   invert_tabline = false,
   italicize_comments = true,
   italicize_strings = false,
@@ -57,10 +57,6 @@ if not utils.tobool(vim.g.gruvbox_inverse) then
   styles.inverse = "NONE"
 end
 
-if not utils.tobool(vim.g.gruvbox_inverse) then
-  styles.inverse = "NONE"
-end
-
 if not utils.tobool(vim.g.gruvbox_undercurl) then
   styles.undercurl = "NONE"
 end
@@ -85,4 +81,4 @@ if utils.tobool(vim.g.gruvbox_italicize_strings) then
   styles.italic_strings = "italic"
 end
 
-return {settings = settings, styles = styles}
+return { settings = settings, styles = styles }
