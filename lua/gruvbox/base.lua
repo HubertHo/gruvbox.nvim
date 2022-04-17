@@ -85,6 +85,7 @@ local color_column = utils.get_color_from_var(vim.g.gruvbox_color_column, bg1, c
 local vert_split = utils.get_color_from_var(vim.g.gruvbox_vert_split, bg0, colors)
 local tabline_sel = utils.get_color_from_var(vim.g.gruvbox_tabline_sel, green, colors)
 local sign_column = utils.get_color_from_var(vim.g.gruvbox_sign_column, bg1, colors)
+local cursor_line = utils.get_color_from_var(vim.g.gruvbox_cursor_line, bg1, colors)
 
 local improved_strings_fg = fg1
 local improved_strings_bg = bg1
@@ -175,7 +176,7 @@ local base_group = {
   iCursor = "Cursor",
   vCursor = "Cursor",
   CursorIM = "Cursor",
-  CursorLine = { bg = bg1 },
+  CursorLine = { bg = cursor_line },
   CursorColumn = "CursorLine",
   Directory = "GruvboxGreenBold",
   DiffAdd = { fg = green, bg = bg0, gui = styles.inverse },
@@ -200,7 +201,7 @@ local base_group = {
   PmenuSbar = { bg = bg2 },
   PmenuThumb = { bg = bg4 },
   Question = "GruvboxOrangeBold",
-  QuickFixLine = { fg = bg0, bg = yellow, gui = styles.bold },
+  QuickFixLine = { bg = bg0, gui = styles.bold },
   Search = { fg = hls_highlight, bg = bg0, gui = styles.inverse },
   SpecialKey = "GruvboxFg4",
   SpellRare = "GruvboxPurpleUnderline",
